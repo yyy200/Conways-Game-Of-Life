@@ -92,11 +92,11 @@ function App() {
             { running ? 'Stop' : 'Start' }
           </button>
 
-          <button onClick={() => setGrid(randomizer())}>
+          <button onClick={() => { setGrid(randomizer()); setRunning(false)} }>
             Random Board
           </button>
 
-          <button onClick={() => setGrid(newEmptyGrid())}>
+          <button onClick={() => {setGrid(newEmptyGrid()); setRunning(false) }}>
             Clear Board
           </button>
       </div>
